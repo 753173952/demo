@@ -11,6 +11,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @Description: UserController
  * @Author: WeiChaoChao
@@ -26,11 +29,20 @@ public class UserController {
 
     @Test
     public void addUser() {
-        User user = new User();
-        user.setEmail("17687910227@163.com");
-        user.setAge(23);
-        user.setName("魏超超");
-        userService.add(user);
+
+        List<User> userList = new ArrayList<>();
+
+        for (int i = 0; i < 100; i++) {
+            User user = new User();
+            user.setEmail("17687910227@163.com");
+            user.setAge(23);
+            user.setName("魏超超");
+            userList.add(user);
+        }
+        long startTime = System.currentTimeMillis();
+        userService.saveBatch(userList);
+        long endTime = System.currentTimeMillis();
+        System.out.println("-----------------------" + (endTime - startTime) + "-----------------------");
     }
 
     @Test
