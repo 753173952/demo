@@ -11,4 +11,6 @@ public interface UserService extends IService<User> {
     void add(User user);
 
     List<User> selectUserList(Page<User> page);
+
+    void selectUser();
 }

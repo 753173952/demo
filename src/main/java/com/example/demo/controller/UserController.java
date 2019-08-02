@@ -15,10 +15,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Description: UserController
  * @Author: WeiChaoChao
  * @Email: 17687910227@163.com
- * @Date: 2019/8/1
+ * @Date: 2019/8/2
  */
 @RestController
 @RunWith(SpringRunner.class)
@@ -76,5 +75,10 @@ public class UserController {
         page.setCurrent(1);
         page.setSize(10);
         System.out.println(userService.selectUserList(page));
+    }
+
+    @Test
+    public void testSelectUser() {
+        userService.selectUser();
     }
 }
