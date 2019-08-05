@@ -9,6 +9,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -22,11 +23,13 @@ import java.util.List;
 @RestController
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@RequestMapping("/user")
 public class UserController {
     @Autowired
     private UserService userService;
 
     @Test
+    @RequestMapping("/addUser")
     public void addUser() {
 
         List<User> userList = new ArrayList<>();
@@ -45,6 +48,7 @@ public class UserController {
     }
 
     @Test
+    @RequestMapping("/selectUser")
     public void selectUser() {
         Page page = new Page();
         page.setSize(10);
