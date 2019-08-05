@@ -66,6 +66,7 @@ public class UserController {
         user.setId(1L);
         user.setName("chaochao");
         user.setEmail("17687910227@163.com");
+        user.setVersion(1);
         userService.getBaseMapper().updateById(user);
     }
 
