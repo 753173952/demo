@@ -64,6 +64,14 @@
 
     </dependencies>
 
+    <repositories>
+        <!-- 阿里私服 -->
+        <repository>
+            <id>aliyunmaven</id>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+        </repository>
+    </repositories>
+
     <build>
         <plugins>
             <plugin>
