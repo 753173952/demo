@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.example.demo.enity.User;
 import com.example.demo.service.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,7 @@ import java.util.List;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @RequestMapping("/user")
+@Slf4j
 public class UserController {
     @Autowired
     private UserService userService;
@@ -86,4 +88,12 @@ public class UserController {
     public void testSelectUser() {
         userService.selectUser();
     }
+
+    @Test
+    public void testLog(){
+        System.out.println(log);
+        System.out.println(log.getClass());
+
+    }
+
 }
