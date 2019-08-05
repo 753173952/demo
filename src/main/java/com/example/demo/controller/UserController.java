@@ -77,6 +77,7 @@ public class UserController {
     }
 
     @Test
+    @RequestMapping("selectUserList")
     public void selectUserList() {
         Page page = new Page();
         page.setCurrent(1);
