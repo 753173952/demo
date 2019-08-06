@@ -43,7 +43,7 @@ public class TaskEnity {
     private String jobName;
 
     /*** job所属组*/
-    private String jobGroup;
+    private String jobGroupName;
 
     /*** cron表达式*/
     @NotBlank(message = "cron表达式不能为空")
