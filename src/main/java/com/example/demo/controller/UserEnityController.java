@@ -2,7 +2,7 @@ package com.example.demo.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.example.demo.enity.User;
+import com.example.demo.enity.UserEnity;
 import com.example.demo.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
@@ -26,7 +26,7 @@ import java.util.List;
 @SpringBootTest
 @RequestMapping("/user")
 @Slf4j
-public class UserController {
+public class UserEnityController {
     @Autowired
     private UserService userService;
 
@@ -34,17 +34,17 @@ public class UserController {
     @RequestMapping("/addUser")
     public void addUser() {
 
-        List<User> userList = new ArrayList<>();
+        List<UserEnity> userEnityList = new ArrayList<>();
 
         for (int i = 0; i < 100; i++) {
-            User user = new User();
-            user.setEmail("17687910227@163.com");
-            user.setAge(23);
-            user.setName("魏超超");
-            userList.add(user);
+            UserEnity userEnity = new UserEnity();
+            userEnity.setEmail("17687910227@163.com");
+            userEnity.setAge(23);
+            userEnity.setName("魏超超");
+            userEnityList.add(userEnity);
         }
         long startTime = System.currentTimeMillis();
-        userService.saveBatch(userList);
+        userService.saveBatch(userEnityList);
         long endTime = System.currentTimeMillis();
         System.out.println("-----------------------" + (endTime - startTime) + "-----------------------");
     }
@@ -61,19 +61,19 @@ public class UserController {
 
     @Test
     public void deleteUser() {
-        User user = new User();
-        user.setId(1L);
-        user.deleteById(user.getId());
+        UserEnity userEnity = new UserEnity();
+        userEnity.setId(1L);
+        userEnity.deleteById(userEnity.getId());
     }
 
     @Test
     public void updateUser() {
-        User user = new User();
-        user.setId(1L);
-        user.setName("chaochao");
-        user.setEmail("17687910227@163.com");
-        user.setVersion(1);
-        userService.getBaseMapper().updateById(user);
+        UserEnity userEnity = new UserEnity();
+        userEnity.setId(1L);
+        userEnity.setName("chaochao");
+        userEnity.setEmail("17687910227@163.com");
+        userEnity.setVersion(1);
+        userService.getBaseMapper().updateById(userEnity);
     }
 
     @Test

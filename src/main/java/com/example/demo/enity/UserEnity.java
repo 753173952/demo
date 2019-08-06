@@ -9,7 +9,7 @@ import lombok.Data;
 
 @Data
 @TableName(value = "user")
-public class User extends Model<User> {
+public class UserEnity extends Model<UserEnity> {
     /**
      * 设置主键自增
      */

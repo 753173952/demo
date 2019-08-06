@@ -2,7 +2,7 @@ package com.example.demo.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.example.demo.enity.User;
+import com.example.demo.enity.UserEnity;
 
 import java.util.List;
 
@@ -11,7 +11,7 @@ import java.util.List;
  * @Email: 17687910227@163.com
  * @Date: 2019/8/1
  */
-public interface UserMapper extends BaseMapper<User> {
+public interface UserMapper extends BaseMapper<UserEnity> {
 
     /**
      * 查找用户
@@ -19,6 +19,6 @@ public interface UserMapper extends BaseMapper<User> {
      * @param page 分页参数对象
      * @return
      */
-    List<User> selectUser(Page<User> page);
+    List<UserEnity> selectUser(Page<UserEnity> page);
 
 }

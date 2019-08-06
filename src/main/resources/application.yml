@@ -7,7 +7,7 @@ spring:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
   profiles:
-    include: jdbc,mybatis #引入数据库相关配置
+    include: jdbc,mybatis,quartz #引入数据库相关配置
 
 
 
