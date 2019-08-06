@@ -21,7 +21,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @TableName("task")
-public class TaskEnity {
+public class JobEnity {
     private static final long serialVersionUID = 1L;
 
     /*** 任务id*/

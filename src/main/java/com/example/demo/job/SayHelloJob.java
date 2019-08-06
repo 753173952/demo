@@ -1,17 +1,12 @@
 package com.example.demo.job;
 
-import com.example.demo.mapper.UserMapper;
+import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.quartz.QuartzJobBean;
 
-public class SayHelloJob extends QuartzJobBean {
-    @Autowired
-    private UserMapper userMapper;
-
+public class SayHelloJob implements Job {
     @Override
-    protected void executeInternal(JobExecutionContext jobExecutionContext) throws JobExecutionException {
-
+    public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
+        System.out.println("---------------------我是定时任务------------------");
     }
 }
