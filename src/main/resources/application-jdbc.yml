@@ -1,0 +1,36 @@
+##############################数据库连接池配置################################
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:32803/demo
+    username: root
+    password: f0SuAG+6YIPjLDks78CF518Lb8sRInAug7teBQHlHCHGhRxsW+VcSwkvAikv0+flNMZU8MPIVahMTL57W+J7lQ==
+    druid:
+      initial-size: 3 #初始化连接池大小
+      min-idle: 3 #最小连接池大小
+      max-active: 20 #最大连接池数量
+      keep-alive: true #保持连接存货
+      max-wait: 60000 #获取连接时最大等待时间
+      time-between-eviction-runs-millis: 60000 #配置隔多久时间进行一次检测  检测需要关闭的空闲连接
+      validation-query: SELECT 1 FROM DUAL #测试连接
+      test-while-idle: true #申请连接时检测  建议开启对性能影响小增加安全性
+      test-on-borrow: false #获取连接时执行检测(影响性能)
+      test-on-return: false #归还连接时执行检测(影响性能)
+      pool-prepared-statements: true #是否开启PSCache PSCache对支持游标的数据库性能提升巨大
+      max-open-prepared-statements: 100
+      filters: stat,wall,slf4j #配置监控统计拦截filters,去掉后监控界面sql无法统计，'wall'用于防火墙
+      connection-properties: config.decrypt=true;config.decrypt.key=${customer.publickKey};druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000 #通过connectProperties属性来打开mergeSql功能；慢SQL记录；数据库密码解密功能
+      use-global-data-source-stat: true #合并多个DruidDataSource监控数据
+      aop-patterns: com.example.demo.service.* #spring监控配置
+      filter:
+        config:
+          enabled: true #开启数据库过滤器 一定要开启不然数据库加密会不生效
+        stat:
+          log-slow-sql: true #通过connectProperties属性来打开mergeSql功能；慢SQL记录；数据库密码解密功能
+
+customer:
+  publickKey: MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALsdeIqTfljf1FHuzM3m9UiIFltS6G+zp2PZpG4/melrcwdfWeyHFPhUhRUbZRL0sucy01gc+tg5fF2HCUy4AYECAwEAAQ== #数据库密码加密公钥
+
+##############################################################################
