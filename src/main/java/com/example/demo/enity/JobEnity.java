@@ -20,7 +20,7 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@TableName("task")
+@TableName("job")
 public class JobEnity {
     private static final long serialVersionUID = 1L;
 
@@ -28,14 +28,10 @@ public class JobEnity {
     @TableId
     private Long id;
 
-    /*** spring bean名称*/
+    /*** bean名称*/
     @NotBlank(message = "bean名称不能为空")
     private String jobClassName;
-
-    /*** 方法名*/
-    @NotBlank(message = "方法名称不能为空")
-    private String ExecuteMethodName;
-
+    
     /*** 参数*/
     private String jobParams;
 
@@ -49,13 +45,13 @@ public class JobEnity {
     @NotBlank(message = "cron表达式不能为空")
     private String cronExpression;
 
-    /*** 任务状态*/
+    /*** 任务状态 0正常 1暂停*/
     private Integer jobStatus;
 
     /*** 备注*/
     private String jobDescription;
 
-    /*** 是否删除*/
+    /*** 是否删除 0正常 1删除*/
     @TableLogic
     private Integer isDelete;
 

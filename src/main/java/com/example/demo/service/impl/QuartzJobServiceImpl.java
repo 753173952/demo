@@ -26,10 +26,9 @@ public class QuartzJobServiceImpl extends ServiceImpl<JobMapper, JobEnity> imple
     @PostConstruct
     public void initJob() {
         log.info("---------------------------------项目启动开始激活定时任务---------------------------");
-        List<JobEnity> jobEnityList = this.list();
+        List<JobEnity> jobEnityList = this.baseMapper.selectList(null);
         if (!CollectionUtils.isEmpty(jobEnityList)) {
             for (JobEnity jobEnity : jobEnityList) {
-                log.info("初始化定时任务:{}", jobEnity.getJobClassName());
                 addJob(jobEnity);
             }
         }
@@ -53,6 +52,8 @@ public class QuartzJobServiceImpl extends ServiceImpl<JobMapper, JobEnity> imple
             Class<? extends Job> jobClass = (Class<? extends Job>) Class.forName(jobEnity.getJobClassName());
             JobDetail jobDetail = JobBuilder.newJob(jobClass).withIdentity(jobKey).withDescription(jobEnity.getJobDescription()).build();
             scheduler.scheduleJob(jobDetail, cronTrigger);
+            log.info("添加定时任务：{}成功！", jobEnity.getJobClassName());
+            this.saveOrUpdate(jobEnity);
         } catch (Exception e) {
             log.error(e.getMessage(), e);
         }
@@ -71,6 +72,7 @@ public class QuartzJobServiceImpl extends ServiceImpl<JobMapper, JobEnity> imple
             CronScheduleBuilder scheduleBuilder = CronScheduleBuilder.cronSchedule(jobEnity.getCronExpression());
             cronTrigger = cronTrigger.getTriggerBuilder().withIdentity(triggerKey).withSchedule(scheduleBuilder).build();
             scheduler.rescheduleJob(triggerKey, cronTrigger);
+            this.saveOrUpdate(jobEnity);
             return true;
         } catch (Exception e) {
             log.error(e.getMessage(), e);
@@ -85,6 +87,7 @@ public class QuartzJobServiceImpl extends ServiceImpl<JobMapper, JobEnity> imple
     public Boolean resumeJob(JobEnity jobEnity) {
         try {
             scheduler.resumeJob(new JobKey(jobEnity.getJobName(), jobEnity.getJobGroupName()));
+            this.saveOrUpdate(jobEnity);
             return true;
         } catch (Exception e) {
             log.error(e.getMessage(), e);
@@ -102,6 +105,7 @@ public class QuartzJobServiceImpl extends ServiceImpl<JobMapper, JobEnity> imple
         try {
             JobKey jobKey = new JobKey(jobEnity.getJobName(), jobEnity.getJobGroupName());
             scheduler.pauseJob(jobKey);
+            this.saveOrUpdate(jobEnity);
             return true;
         } catch (Exception e) {
             log.error(e.getMessage(), e);
@@ -117,6 +121,7 @@ public class QuartzJobServiceImpl extends ServiceImpl<JobMapper, JobEnity> imple
         try {
             JobKey jobKey = new JobKey(jobEnity.getJobName(), jobEnity.getJobGroupName());
             scheduler.deleteJob(jobKey);
+            this.deleteJob(jobEnity);
             return true;
         } catch (Exception e) {
             log.error(e.getMessage(), e);
