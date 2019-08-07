@@ -3,6 +3,7 @@ spring:
     properties: #相关属性配置
       org:
         quartz:
+          skipUpdateCheck: false #跳过Quartz检查版本更新
           scheduler:
             batchTriggerAcquisitionMaxCount: 1 #允许调度程序节点一次获取（用于触发）的触发器的最大数量 默认值为1
             instanceName: quartzScheduler #quartz名称
@@ -21,7 +22,6 @@ spring:
             threadCount: 5 #线程数量
             threadPriority: 5
             threadsInheritContextClassLoaderOfInitializingThread: true
-          skipUpdateCheck: false #跳过Quartz检查版本更新
     job-store-type: jdbc #任务信息存储至数据库
     wait-for-jobs-to-complete-on-shutdown: true #等待任务完成后再停止
     auto-startup: true
