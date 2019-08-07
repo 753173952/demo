@@ -19,6 +19,7 @@ public class QuartzJobServiceImpl extends ServiceImpl<JobMapper, JobEnity> imple
 
     @Autowired
     private Scheduler scheduler;
+
     /**
      * 激活所有定时任务
      */
