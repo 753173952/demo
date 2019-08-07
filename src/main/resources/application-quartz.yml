@@ -20,12 +20,11 @@ spring:
             threadCount: 5 #线程数量
             threadPriority: 5
             threadsInheritContextClassLoaderOfInitializingThread: true
-
     job-store-type: jdbc #任务信息存储至数据库
     wait-for-jobs-to-complete-on-shutdown: true #等待任务完成后再停止
     auto-startup: true
     startup-delay: 10s
-    overwrite-existing-jobs: true
+    overwrite-existing-jobs: true #修改配置后使正在运行的Job能够生效
     jdbc:
-      initialize-schema: never #初始化表结构  不初始化
+      initialize-schema: never #初始化表结构  不初始化(好像这个属性不起作用)
 #############################################################################
