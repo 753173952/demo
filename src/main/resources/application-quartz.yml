@@ -6,7 +6,7 @@ spring:
           skipUpdateCheck: true #跳过Quartz检查版本更新
           scheduler:
             batchTriggerAcquisitionMaxCount: 1 #允许调度程序节点一次获取（用于触发）的触发器的最大数量 默认值为1  太小不适合大量的短时任务
-            instanceName: quartzScheduler #quartz名称
+            instanceName: quartzScheduler #quartz名称 急群众每个实例名必须相同
             instanceId: AUTO #ID设置为自动获取 每一个必须不同 （所有调度器实例中是唯一的）使用集群：AUTO 不使用集群：NON_CLUSTERED
             idleWaitTime: 30000 #在调度程序处于空闲状态时，调度程序将在重新查询可用触发器之前等待的时间量（以毫秒为单位），默认是30秒
           jobStore:
@@ -14,8 +14,8 @@ spring:
             driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate #StdJDBC数据库驱动
             tablePrefix: QRTZ_ #Quartz表前缀
             isClustered: true #是否加入集群
-            clusterCheckinInterval: 10000
-            useProperties: true #该值表示是否datamap中所有数据都使用properties模式，即字符串，默认是false
+            clusterCheckinInterval: 20000 #调度实例失效的检查时间间隔
+            useProperties: true #该值表示是否dataMap中所有数据都使用properties模式，即字符串，默认是false
             acquireTriggersWithinLock: true #获取触发器的时候上锁 batchTriggerAcquisitionMaxCount>1 必须设置为true 否则会损坏数据
             misfireThreshold: 60000 #默认值为60s 允许最大作业延迟
           threadPool:
