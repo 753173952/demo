@@ -11,7 +11,7 @@
  Target Server Version : 80017
  File Encoding         : 65001
 
- Date: 06/08/2019 18:40:19
+ Date: 07/08/2019 18:38:48
 */
 
 SET NAMES utf8mb4;
@@ -57,6 +57,11 @@ CREATE TABLE `QRTZ_CRON_TRIGGERS`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
+-- Records of QRTZ_CRON_TRIGGERS
+-- ----------------------------
+INSERT INTO `QRTZ_CRON_TRIGGERS` VALUES ('quartzScheduler', 'SayHelloJob', 'SayHelloJob', '0/5 * * * * ? ', 'Asia/Shanghai');
+
+-- ----------------------------
 -- Table structure for QRTZ_FIRED_TRIGGERS
 -- ----------------------------
 DROP TABLE IF EXISTS `QRTZ_FIRED_TRIGGERS`;
@@ -84,6 +89,11 @@ CREATE TABLE `QRTZ_FIRED_TRIGGERS`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
+-- Records of QRTZ_FIRED_TRIGGERS
+-- ----------------------------
+INSERT INTO `QRTZ_FIRED_TRIGGERS` VALUES ('quartzScheduler', 'NON_CLUSTERED1565172342588', 'SayHelloJob', 'SayHelloJob', 'NON_CLUSTERED', 1565174325137, 1565174330000, 5, 'ACQUIRED', NULL, NULL, '0', '0');
+
+-- ----------------------------
 -- Table structure for QRTZ_JOB_DETAILS
 -- ----------------------------
 DROP TABLE IF EXISTS `QRTZ_JOB_DETAILS`;
@@ -104,6 +114,11 @@ CREATE TABLE `QRTZ_JOB_DETAILS`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
+-- Records of QRTZ_JOB_DETAILS
+-- ----------------------------
+INSERT INTO `QRTZ_JOB_DETAILS` VALUES ('quartzScheduler', 'SayHelloJob', 'SayHelloJob', NULL, 'com.example.demo.job.SayHelloJob', '0', '1', '1', '0', 0x230D0A23576564204175672030372031383A30353A34322043535420323031390D0A);
+
+-- ----------------------------
 -- Table structure for QRTZ_LOCKS
 -- ----------------------------
 DROP TABLE IF EXISTS `QRTZ_LOCKS`;
@@ -116,7 +131,7 @@ CREATE TABLE `QRTZ_LOCKS`  (
 -- ----------------------------
 -- Records of QRTZ_LOCKS
 -- ----------------------------
-INSERT INTO `QRTZ_LOCKS` VALUES ('quartzScheduler', 'STATE_ACCESS');
+INSERT INTO `QRTZ_LOCKS` VALUES ('quartzScheduler', 'TRIGGER_ACCESS');
 
 -- ----------------------------
 -- Table structure for QRTZ_PAUSED_TRIGGER_GRPS
@@ -139,11 +154,6 @@ CREATE TABLE `QRTZ_SCHEDULER_STATE`  (
   `CHECKIN_INTERVAL` bigint(13) NOT NULL,
   PRIMARY KEY (`SCHED_NAME`, `INSTANCE_NAME`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of QRTZ_SCHEDULER_STATE
--- ----------------------------
-INSERT INTO `QRTZ_SCHEDULER_STATE` VALUES ('quartzScheduler', 'chaochao1565060831493', 1565088012189, 10000);
 
 -- ----------------------------
 -- Table structure for QRTZ_SIMPLE_TRIGGERS
@@ -221,24 +231,33 @@ CREATE TABLE `QRTZ_TRIGGERS`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for task
+-- Records of QRTZ_TRIGGERS
 -- ----------------------------
-DROP TABLE IF EXISTS `task`;
-CREATE TABLE `task`  (
-  `id` bigint(20) NOT NULL,
-  `job_class_ame` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `job_execute_method_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+INSERT INTO `QRTZ_TRIGGERS` VALUES ('quartzScheduler', 'SayHelloJob', 'SayHelloJob', 'SayHelloJob', 'SayHelloJob', NULL, 1565174330000, 1565174325000, 5, 'ACQUIRED', 'CRON', 1565172342000, 0, NULL, 2, '');
+
+-- ----------------------------
+-- Table structure for job
+-- ----------------------------
+DROP TABLE IF EXISTS `job`;
+CREATE TABLE `job`  (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `job_class_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `job_params` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `job_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `job_group` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `job_group_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `cron_expression` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `job_status` tinyint(2) NULL DEFAULT NULL,
+  `job_status` tinyint(2) NULL DEFAULT 0,
   `job_description` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `is_delete` tinyint(2) NULL DEFAULT NULL,
+  `is_delete` tinyint(2) NULL DEFAULT 0,
   `create_time` datetime(0) NULL DEFAULT NULL,
   `update_time` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0),
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of job
+-- ----------------------------
+INSERT INTO `job` VALUES (1, 'com.example.demo.job.SayHelloJob', NULL, 'SayHelloJob', 'SayHelloJob', '0/5 * * * * ? ', 0, NULL, 0, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for user
