@@ -3,29 +3,30 @@ spring:
     properties: #相关属性配置
       org:
         quartz:
-          skipUpdateCheck: false #跳过Quartz检查版本更新
+          skipUpdateCheck: true #跳过Quartz检查版本更新
           scheduler:
-            batchTriggerAcquisitionMaxCount: 1 #允许调度程序节点一次获取（用于触发）的触发器的最大数量 默认值为1
+            batchTriggerAcquisitionMaxCount: 1 #允许调度程序节点一次获取（用于触发）的触发器的最大数量 默认值为1  太小不适合大量的短时任务
             instanceName: quartzScheduler #quartz名称
             instanceId: AUTO #ID设置为自动获取 每一个必须不同 （所有调度器实例中是唯一的）使用集群：AUTO 不使用集群：NON_CLUSTERED
+            idleWaitTime: 30000 #在调度程序处于空闲状态时，调度程序将在重新查询可用触发器之前等待的时间量（以毫秒为单位），默认是30秒
           jobStore:
             class: org.quartz.impl.jdbcjobstore.JobStoreTX #jobStore事务
             driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate #StdJDBC数据库驱动
             tablePrefix: QRTZ_ #Quartz表前缀
-            isClustered: false #是否加入集群
+            isClustered: true #是否加入集群
             clusterCheckinInterval: 10000
-            useProperties: true #指定序列化的数据是否以Key-Value的形式存储
+            useProperties: true #该值表示是否datamap中所有数据都使用properties模式，即字符串，默认是false
             acquireTriggersWithinLock: true #获取触发器的时候上锁 batchTriggerAcquisitionMaxCount>1 必须设置为true 否则会损坏数据
-            misfireThreshold: 60000 #默认值为60s
+            misfireThreshold: 60000 #默认值为60s 允许最大作业延迟
           threadPool:
             class: org.quartz.simpl.SimpleThreadPool
-            threadCount: 5 #线程数量
-            threadPriority: 5
+            threadCount: 10 #线程数量
+            threadPriority: 5 #线程优先级 默认为5
             threadsInheritContextClassLoaderOfInitializingThread: true
     job-store-type: jdbc #任务信息存储至数据库
     wait-for-jobs-to-complete-on-shutdown: true #等待任务完成后再停止
-    auto-startup: true
-    startup-delay: 10s
+    auto-startup: true #初始化完成后自动启动schedule
+    startup-delay: 10s #初始化完成后延迟10s执行schedule去执行任务
     overwrite-existing-jobs: true #修改配置后使正在运行的Job能够生效
     jdbc:
       initialize-schema: never #初始化表结构  不初始化(好像这个属性不起作用)
