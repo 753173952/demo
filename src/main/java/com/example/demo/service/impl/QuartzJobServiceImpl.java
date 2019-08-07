@@ -19,7 +19,6 @@ public class QuartzJobServiceImpl extends ServiceImpl<JobMapper, JobEnity> imple
 
     @Autowired
     private Scheduler scheduler;
-
     /**
      * 激活所有定时任务
      */
@@ -30,6 +29,7 @@ public class QuartzJobServiceImpl extends ServiceImpl<JobMapper, JobEnity> imple
         if (!CollectionUtils.isEmpty(jobEnityList)) {
             for (JobEnity jobEnity : jobEnityList) {
                 addJob(jobEnity);
+                log.info("初始化定时任务：{}，定时任务名称为：{}", jobEnity.getJobClassName(), jobEnity.getJobName());
             }
         }
         log.info("---------------------------------项目启动定时任务激活结束---------------------------");
@@ -52,7 +52,6 @@ public class QuartzJobServiceImpl extends ServiceImpl<JobMapper, JobEnity> imple
             Class<? extends Job> jobClass = (Class<? extends Job>) Class.forName(jobEnity.getJobClassName());
             JobDetail jobDetail = JobBuilder.newJob(jobClass).withIdentity(jobKey).withDescription(jobEnity.getJobDescription()).build();
             scheduler.scheduleJob(jobDetail, cronTrigger);
-            log.info("添加定时任务：{}成功！", jobEnity.getJobClassName());
             this.saveOrUpdate(jobEnity);
         } catch (Exception e) {
             log.error(e.getMessage(), e);
