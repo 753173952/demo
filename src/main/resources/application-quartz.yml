@@ -4,6 +4,7 @@ spring:
       org:
         quartz:
           scheduler:
+            batchTriggerAcquisitionMaxCount: 1 #允许调度程序节点一次获取（用于触发）的触发器的最大数量 默认值为1
             instanceName: quartzScheduler #quartz名称
             instanceId: AUTO #ID设置为自动获取 每一个必须不同 （所有调度器实例中是唯一的）使用集群：AUTO 不使用集群：NON_CLUSTERED
           jobStore:
@@ -13,12 +14,14 @@ spring:
             isClustered: false #是否加入集群
             clusterCheckinInterval: 10000
             useProperties: true #指定序列化的数据是否以Key-Value的形式存储
-            acquireTriggersWithinLock: true
+            acquireTriggersWithinLock: true #获取触发器的时候上锁 batchTriggerAcquisitionMaxCount>1 必须设置为true 否则会损坏数据
+            misfireThreshold: 60000 #默认值为60s
           threadPool:
             class: org.quartz.simpl.SimpleThreadPool
             threadCount: 5 #线程数量
             threadPriority: 5
             threadsInheritContextClassLoaderOfInitializingThread: true
+          skipUpdateCheck: false #跳过Quartz检查版本更新
     job-store-type: jdbc #任务信息存储至数据库
     wait-for-jobs-to-complete-on-shutdown: true #等待任务完成后再停止
     auto-startup: true
