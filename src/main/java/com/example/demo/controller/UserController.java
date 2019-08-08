@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.example.demo.common.config.CommonResult;
 import com.example.demo.enity.UserEnity;
 import com.example.demo.service.UserService;
 import lombok.extern.slf4j.Slf4j;
@@ -10,6 +11,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -26,7 +28,7 @@ import java.util.List;
 @SpringBootTest
 @RequestMapping("/user")
 @Slf4j
-public class UserEnityController {
+public class UserController {
     @Autowired
     private UserService userService;
 
@@ -40,7 +42,7 @@ public class UserEnityController {
             UserEnity userEnity = new UserEnity();
             userEnity.setEmail("17687910227@163.com");
             userEnity.setAge(23);
-            userEnity.setName("魏超超");
+            userEnity.setUserName("魏超超");
             userEnityList.add(userEnity);
         }
         long startTime = System.currentTimeMillis();
@@ -70,7 +72,7 @@ public class UserEnityController {
     public void updateUser() {
         UserEnity userEnity = new UserEnity();
         userEnity.setId(1L);
-        userEnity.setName("chaochao");
+        userEnity.setUserName("chaochao");
         userEnity.setEmail("17687910227@163.com");
         userEnity.setVersion(1);
         userService.getBaseMapper().updateById(userEnity);
@@ -91,10 +93,20 @@ public class UserEnityController {
     }
 
     @Test
-    public void testLog(){
+    public void testLog() {
         System.out.println(log);
         System.out.println(log.getClass());
 
+    }
+
+    @RequestMapping("login")
+    public Object userLogin(@Validated UserEnity userEnity) {
+        boolean isExists = userService.selectUserByNameAndPassword(userEnity);
+        if (isExists) {
+            //TODO
+        }
+
+        return new CommonResult();
     }
 
 }

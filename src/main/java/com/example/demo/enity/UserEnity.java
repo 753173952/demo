@@ -7,19 +7,28 @@ import com.baomidou.mybatisplus.annotation.Version;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import lombok.Data;
 
+import javax.validation.constraints.NotBlank;
+
 @Data
 @TableName(value = "user")
 public class UserEnity extends Model<UserEnity> {
-    /**
-     * 设置主键自增
-     */
+    /*** 用户Id*/
     @TableId
     private Long id;
-    private String name;
+    /*** 用户名*/
+    @NotBlank(message = "用户名不能为空")
+    private String userName;
+    /*** 用户密码*/
+    @NotBlank(message = "用户密码不能为空")
+    private String userPassword;
+    /*** 用户年龄*/
     private Integer age;
+    /*** 用户邮箱*/
     private String email;
+    /*** 是否删除 0正常 1删除*/
     @TableLogic
     private Integer isDelete;
+    /*** 版本号(主要是用作mybatis中的乐观锁使用)*/
     @Version
     private Integer version;
 }

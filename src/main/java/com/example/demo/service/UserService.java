@@ -13,4 +13,12 @@ public interface UserService extends IService<UserEnity> {
     List<UserEnity> selectUserList(Page<UserEnity> page);
 
     void selectUser();
+
+    /**
+     * 用具用户名和密码查找用户
+     *
+     * @param userEnity
+     * @return
+     */
+    boolean selectUserByNameAndPassword(UserEnity userEnity);
 }

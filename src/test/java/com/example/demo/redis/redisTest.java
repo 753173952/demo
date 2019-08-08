@@ -20,7 +20,7 @@ public class redisTest {
     @Test
     public void setValue() {
         UserEnity userEnity = new UserEnity();
-        userEnity.setName("chaochao");
+        userEnity.setUserName("chaochao");
         userEnity.setAge(23);
         userEnity.setId(10L);
         redisTemplate.opsForValue().set("student", userEnity);

@@ -1,5 +1,6 @@
 package com.example.demo.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.example.demo.enity.UserEnity;
@@ -32,11 +33,23 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserEnity> implemen
     @Transactional
     public void selectUser() {
         UserEnity userEnity1 = userMapper.selectById(1L);
-        userEnity1.setName("guiling");
+        userEnity1.setUserName("guiling");
         UserEnity userEnity2 = userMapper.selectById(1L);
         UserEnity userEnity3 = userMapper.selectById(1L);
         System.out.println(userEnity1);
         System.out.println(userEnity2);
         System.out.println(userEnity3);
+    }
+
+    @Override
+    public boolean selectUserByNameAndPassword(UserEnity userEnity) {
+        QueryWrapper<UserEnity> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("user_name", userEnity.getUserName());
+        queryWrapper.eq("user_password", userEnity.getUserPassword());
+        UserEnity user = this.baseMapper.selectOne(queryWrapper);
+        if (user != null) {
+            return true;
+        }
+        return false;
     }
 }
