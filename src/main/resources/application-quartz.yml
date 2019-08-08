@@ -22,7 +22,7 @@ spring:
             class: org.quartz.simpl.SimpleThreadPool
             threadCount: 10 #线程数量
             threadPriority: 5 #线程优先级 默认为5
-            threadsInheritContextClassLoaderOfInitializingThread: true
+            threadsInheritContextClassLoaderOfInitializingThread: true #用于指定Quartz产生的线程是否会继承初始化线程（初始化Quartz实例的线程）的上下文ClassLoader
     job-store-type: jdbc #任务信息存储至数据库
     wait-for-jobs-to-complete-on-shutdown: true #等待任务完成后再停止
     auto-startup: true #初始化完成后自动启动schedule

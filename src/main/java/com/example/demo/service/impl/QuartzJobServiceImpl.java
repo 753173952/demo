@@ -51,6 +51,7 @@ public class QuartzJobServiceImpl extends ServiceImpl<JobMapper, JobEnity> imple
             CronScheduleBuilder scheduleBuilder = CronScheduleBuilder.cronSchedule(jobEnity.getCronExpression()).withMisfireHandlingInstructionDoNothing();
             CronTrigger cronTrigger = TriggerBuilder.newTrigger().withIdentity(triggerKey).withDescription(jobEnity.getJobDescription()).withSchedule(scheduleBuilder).build();
             Class<? extends Job> jobClass = (Class<? extends Job>) Class.forName(jobEnity.getJobClassName());
+            // requestRecovery(true) 集群模式下运行失败会由其他节点重新执行任务
             JobDetail jobDetail = JobBuilder.newJob(jobClass).withIdentity(jobKey).withDescription(jobEnity.getJobDescription()).requestRecovery(true).build();
             scheduler.scheduleJob(jobDetail, cronTrigger);
             this.saveOrUpdate(jobEnity);
