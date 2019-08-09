@@ -33,7 +33,7 @@ public class JWTUtils {
         // 当前时间
         Date now = (Date) calendar.getTime().clone();
         // 过期时间
-        calendar.add(Calendar.DATE, 1);
+        calendar.add(Calendar.SECOND, 10);
         Date expireTime = calendar.getTime();
 
         //构建token头部信息
@@ -69,17 +69,12 @@ public class JWTUtils {
      * 校验token
      */
     public static boolean verifyUserToken(String userToken, String secret) {
-        try {
-            //加密算法和secret
-            Algorithm algorithm = Algorithm.HMAC256(secret);
-            //JWT验证器
-            JWTVerifier jwtVerifier = JWT.require(algorithm).withIssuer(issuer).build();
-            //校验token  检验失败抛出异常
-            jwtVerifier.verify(userToken);
-        } catch (Exception e) {
-            log.error(e.getMessage(), e);
-            return false;
-        }
+        //加密算法和secret
+        Algorithm algorithm = Algorithm.HMAC256(secret);
+        //JWT验证器
+        JWTVerifier jwtVerifier = JWT.require(algorithm).withIssuer(issuer).build();
+        //校验token  检验失败抛出异常
+        jwtVerifier.verify(userToken);
 
         return true;
     }
@@ -89,11 +84,7 @@ public class JWTUtils {
      * 不要秘钥解析也能拿到定义的信息
      */
     public static String getUserName(String token) {
-        try {
-            return JWT.decode(token).getClaim("userName").asString();
-        } catch (Exception e) {
-            log.error(e.getMessage(), e);
-        }
-        return null;
+
+        return JWT.decode(token).getClaim("userName").asString();
     }
 }
