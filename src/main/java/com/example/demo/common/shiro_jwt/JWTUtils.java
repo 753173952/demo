@@ -4,7 +4,6 @@ import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTCreator;
 import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
-import com.auth0.jwt.interfaces.DecodedJWT;
 import com.example.demo.enity.UserEnity;
 import lombok.extern.slf4j.Slf4j;
 
@@ -75,8 +74,8 @@ public class JWTUtils {
             Algorithm algorithm = Algorithm.HMAC256(secret);
             //JWT验证器
             JWTVerifier jwtVerifier = JWT.require(algorithm).withIssuer(issuer).build();
-            //校验token并返回解析的token信息
-            DecodedJWT decodedJWT = jwtVerifier.verify(userToken);
+            //校验token  检验失败抛出异常
+            jwtVerifier.verify(userToken);
         } catch (Exception e) {
             log.error(e.getMessage(), e);
             return false;

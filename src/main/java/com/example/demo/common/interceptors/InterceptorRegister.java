@@ -16,6 +16,6 @@ public class InterceptorRegister extends WebMvcConfigurationSupport {
     @Override
     protected void addInterceptors(InterceptorRegistry registry) {
         //注册用户token校验拦截器
-        registry.addInterceptor(new UserTokenInterceptor()).addPathPatterns("/**").excludePathPatterns("/user/login", "/user/register");
+        //registry.addInterceptor(new UserTokenInterceptor()).addPathPatterns("/**").excludePathPatterns("/user/login", "/user/register");
     }
 }

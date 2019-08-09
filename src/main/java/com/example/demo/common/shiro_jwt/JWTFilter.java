@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * 自定义JWT过滤器
+ * 自定义JWT-Shiro过滤器
  *
  * @Author: WeiChaoChao
  * @Email: 17687910227@163.com
@@ -36,7 +36,7 @@ public class JWTFilter extends BasicHttpAuthenticationFilter {
         HttpServletRequest httpServletRequest = (HttpServletRequest) request;
         String token = httpServletRequest.getHeader("token");
         JWTToken jwtToken = new JWTToken(token);
-        //提交给realm进行登入，如果错误他会抛出异常并捕获
+        //提交realm进行登入，如果错误他会抛出异常并捕获
         getSubject(request, response).login(jwtToken);
         //没有抛出异常则表示登录成功
         return true;

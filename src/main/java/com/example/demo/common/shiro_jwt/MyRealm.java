@@ -21,7 +21,7 @@ import org.springframework.stereotype.Component;
  * @Email: 17687910227@163.com
  * @Date: 2019/8/9
  */
-@Component
+@Component("myRelam")
 public class MyRealm extends AuthorizingRealm {
     @Autowired
     private UserService userService;
