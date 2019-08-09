@@ -1,4 +1,4 @@
-package com.example.demo.common.tools;
+package com.example.demo.common.shiro_jwt;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTCreator;
@@ -6,6 +6,7 @@ import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import com.example.demo.enity.UserEnity;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -19,17 +20,16 @@ import java.util.Map;
  * @Email: 17687910227@163.com
  * @Date: 2019/8/8
  */
+@Slf4j
 public class JWTUtils {
 
-    /*** 秘钥*/
-    private static String privateSecret = "mySecret";
     /*** 签发人名称*/
     private static String issuer = "service";
 
     /**
      * 生成token
      */
-    public static String createUserToken(UserEnity userEnity) {
+    public static String createUserToken(UserEnity userEnity, String secret) {
         Calendar calendar = Calendar.getInstance();
         // 当前时间
         Date now = (Date) calendar.getTime().clone();
@@ -40,7 +40,7 @@ public class JWTUtils {
         //构建token头部信息
         Map<String, Object> head = new HashMap<>(2);
         //构建秘钥信息
-        Algorithm algorithm = Algorithm.HMAC256(privateSecret);
+        Algorithm algorithm = Algorithm.HMAC256(secret);
         head.put("alg", "HS256");
         head.put("typ", "JWT");
 
@@ -48,7 +48,7 @@ public class JWTUtils {
         jwtBuild.withHeader(head);
 
         //自定义载荷中的字段
-        jwtBuild.withClaim("id", userEnity.getId());
+        jwtBuild.withClaim("userName", userEnity.getUserName());
         //签发人
         jwtBuild.withIssuer(issuer);
         //token主题
@@ -67,16 +67,34 @@ public class JWTUtils {
     }
 
     /**
-     * 解析token中的信息
+     * 校验token
      */
-    public static DecodedJWT verifyUserToken(String userToken) {
-        //加密算法和secret
-        Algorithm algorithm = Algorithm.HMAC256(privateSecret);
-        //JWT验证器
-        JWTVerifier jwtVerifier = JWT.require(algorithm).withIssuer(issuer).build();
+    public static boolean verifyUserToken(String userToken, String secret) {
+        try {
+            //加密算法和secret
+            Algorithm algorithm = Algorithm.HMAC256(secret);
+            //JWT验证器
+            JWTVerifier jwtVerifier = JWT.require(algorithm).withIssuer(issuer).build();
+            //校验token并返回解析的token信息
+            DecodedJWT decodedJWT = jwtVerifier.verify(userToken);
+        } catch (Exception e) {
+            log.error(e.getMessage(), e);
+            return false;
+        }
 
-        //解析Token
-        return jwtVerifier.verify(userToken);
+        return true;
     }
 
+    /**
+     * 拿到token中用户id
+     * 不要秘钥解析也能拿到定义的信息
+     */
+    public static String getUserName(String token) {
+        try {
+            return JWT.decode(token).getClaim("userName").asString();
+        } catch (Exception e) {
+            log.error(e.getMessage(), e);
+        }
+        return null;
+    }
 }

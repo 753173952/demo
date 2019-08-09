@@ -1,8 +1,7 @@
 package com.example.demo.controller;
 
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.example.demo.common.config.CommonResult;
+import com.example.demo.common.shiro_jwt.JWTUtils;
 import com.example.demo.enity.UserEnity;
 import com.example.demo.service.UserService;
 import lombok.extern.slf4j.Slf4j;
@@ -54,55 +53,16 @@ public class UserController {
         System.out.println("-----------------------" + (endTime - startTime) + "-----------------------");
     }
 
-    @Test
-    @RequestMapping("/selectUser")
-    public void selectUser() {
-        Page page = new Page();
-        page.setSize(10);
-        page.setCurrent(1);
-        IPage iPage = userService.page(page);
-        System.out.println(iPage);
-    }
-
-    @Test
-    public void deleteUser() {
-        UserEnity userEnity = new UserEnity();
-        userEnity.setId(1L);
-        userEnity.deleteById(userEnity.getId());
-    }
-
-    @Test
-    public void updateUser() {
-        UserEnity userEnity = new UserEnity();
-        userEnity.setId(1L);
-        userEnity.setUserName("chaochao");
-        userEnity.setEmail("17687910227@163.com");
-        userEnity.setVersion(1);
-        userService.getBaseMapper().updateById(userEnity);
-    }
-
-    @Test
-    @RequestMapping("selectUserList")
-    public void selectUserList() {
-        Page page = new Page();
-        page.setCurrent(1);
-        page.setSize(10);
-        System.out.println(userService.selectUserList(page));
-    }
-
-    @Test
-    public void testSelectUser() {
-        userService.selectUser();
-    }
 
     @RequestMapping("login")
     public Object userLogin(@RequestBody @Valid UserEnity userEnity) {
-        /*boolean isExists = userService.selectUserByNameAndPassword(userEnity);
-        if (isExists) {
-            //TODO
-        }*/
+        UserEnity user = userService.selectUserByNameAndPassword(userEnity);
+        if (user != null) {
+            // 用户存在则返回JWTToken给前台
+            return new CommonResult().setResult(JWTUtils.createUserToken(user, user.getUserPassword()));
+        }
 
-        return new CommonResult();
+        return new CommonResult().setFailed();
     }
 
 

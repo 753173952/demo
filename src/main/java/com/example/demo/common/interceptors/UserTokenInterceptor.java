@@ -1,18 +1,5 @@
 package com.example.demo.common.interceptors;
 
-import com.auth0.jwt.interfaces.DecodedJWT;
-import com.example.demo.common.tools.JWTUtils;
-import com.example.demo.enity.UserEnity;
-import com.example.demo.service.UserService;
-import com.example.demo.service.impl.UserServiceImpl;
-import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.StringUtils;
-import org.springframework.web.servlet.HandlerInterceptor;
-import org.springframework.web.servlet.ModelAndView;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 /**
  * 用户Token认证
  *
@@ -20,7 +7,7 @@ import javax.servlet.http.HttpServletResponse;
  * @Email: 17687910227@163.com
  * @Date: 2019/8/8
  */
-@Slf4j
+/*@Slf4j
 public class UserTokenInterceptor implements HandlerInterceptor {
 
     private UserService userService = new UserServiceImpl();
@@ -48,7 +35,7 @@ public class UserTokenInterceptor implements HandlerInterceptor {
         if (user == null) {
             throw new RuntimeException("用户信息不存在，请重新登录！");
         }
-        return false;
+        return true;
     }
 
     @Override
@@ -60,4 +47,4 @@ public class UserTokenInterceptor implements HandlerInterceptor {
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
 
     }
-}
+}*/
