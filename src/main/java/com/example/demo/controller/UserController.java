@@ -12,9 +12,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,6 +30,7 @@ import java.util.List;
 @SpringBootTest
 @RequestMapping("/user")
 @Slf4j
+@Validated
 public class UserController {
     @Autowired
     private UserService userService;
@@ -92,21 +95,15 @@ public class UserController {
         userService.selectUser();
     }
 
-    @Test
-    public void testLog() {
-        System.out.println(log);
-        System.out.println(log.getClass());
-
-    }
-
     @RequestMapping("login")
-    public Object userLogin(@Validated UserEnity userEnity) {
-        boolean isExists = userService.selectUserByNameAndPassword(userEnity);
+    public Object userLogin(@RequestBody @Valid UserEnity userEnity) {
+        /*boolean isExists = userService.selectUserByNameAndPassword(userEnity);
         if (isExists) {
             //TODO
-        }
+        }*/
 
         return new CommonResult();
     }
+
 
 }

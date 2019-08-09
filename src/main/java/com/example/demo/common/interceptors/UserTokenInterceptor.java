@@ -4,10 +4,9 @@ import com.auth0.jwt.interfaces.DecodedJWT;
 import com.example.demo.common.tools.JWTUtils;
 import com.example.demo.enity.UserEnity;
 import com.example.demo.service.UserService;
+import com.example.demo.service.impl.UserServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -21,12 +20,10 @@ import javax.servlet.http.HttpServletResponse;
  * @Email: 17687910227@163.com
  * @Date: 2019/8/8
  */
-@Component
 @Slf4j
 public class UserTokenInterceptor implements HandlerInterceptor {
 
-    @Autowired
-    private UserService userService;
+    private UserService userService = new UserServiceImpl();
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {

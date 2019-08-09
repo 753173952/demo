@@ -6,11 +6,13 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.Version;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import lombok.Data;
+import org.springframework.validation.annotation.Validated;
 
 import javax.validation.constraints.NotBlank;
 
 @Data
 @TableName(value = "user")
+@Validated
 public class UserEnity extends Model<UserEnity> {
     /*** 用户Id*/
     @TableId
