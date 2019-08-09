@@ -65,5 +65,11 @@ public class UserController {
         return new CommonResult().setFailed();
     }
 
+    @RequestMapping("testToken")
+    public Object testToken() {
+
+        return new CommonResult();
+    }
+
 
 }
