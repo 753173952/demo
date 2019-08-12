@@ -1,0 +1,349 @@
+2019-08-12 16:35:46,444 INFO [main] c.x.job.admin.XxlJobAdminApplication [StartupInfoLogger.java : 50] Starting XxlJobAdminApplication on chaochao with PID 18128 (E:\IdeaProjects\demo\xxl-job\xxl-job-admin\target\classes started by Hasee in E:\IdeaProjects\demo)
+2019-08-12 16:35:46,448 INFO [main] c.x.job.admin.XxlJobAdminApplication [SpringApplication.java : 650] The following profiles are active: jdbc
+2019-08-12 16:35:47,536 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 244] Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-12 16:35:47,538 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 126] Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-12 16:35:47,569 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 182] Finished Spring Data repository scanning in 19ms. Found 0 repository interfaces.
+2019-08-12 16:35:47,844 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 16:35:47,883 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c7c17d54] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 16:35:47,899 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'spring.datasource.druid-com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties' of type [com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 16:35:47,908 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'advisor' of type [org.springframework.aop.support.RegexpMethodPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 16:35:48,328 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 90] Tomcat initialized with port(s): 8081 (http)
+2019-08-12 16:35:48,353 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Initializing ProtocolHandler ["http-nio-8081"]
+2019-08-12 16:35:48,367 INFO [main] o.a.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
+2019-08-12 16:35:48,368 INFO [main] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-12 16:35:48,652 INFO [main] o.a.c.c.C.[.[.[/xxl-job-admin] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
+2019-08-12 16:35:48,652 INFO [main] o.s.web.context.ContextLoader [ServletWebServerApplicationContext.java : 283] Root WebApplicationContext: initialization completed in 1832 ms
+2019-08-12 16:35:48,733 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
+2019-08-12 16:35:50,009 INFO [main] c.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 1003] {dataSource-1} inited
+2019-08-12 16:35:50,246 INFO [main] c.x.r.r.p.XxlRpcProviderFactory [XxlRpcProviderFactory.java : 176] >>>>>>>>>>> xxl-rpc, provider factory add service success. serviceKey = com.xxl.job.core.biz.AdminBiz, serviceBean = class com.xxl.job.admin.service.impl.AdminBizImpl
+2019-08-12 16:35:50,249 INFO [main] c.x.j.a.core.conf.XxlJobScheduler [XxlJobScheduler.java : 57] >>>>>>>>> init xxl-job admin success.
+2019-08-12 16:35:50,487 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-12 16:35:50,618 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java : 58] Adding welcome page template: index
+2019-08-12 16:35:50,997 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Starting ProtocolHandler ["http-nio-8081"]
+2019-08-12 16:35:51,019 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 202] Tomcat started on port(s): 8081 (http) with context path '/xxl-job-admin'
+2019-08-12 16:35:51,022 INFO [main] c.x.job.admin.XxlJobAdminApplication [StartupInfoLogger.java : 59] Started XxlJobAdminApplication in 5.191 seconds (JVM running for 7.133)
+2019-08-12 16:35:55,000 INFO [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 50] >>>>>>>>> init xxl-job admin scheduler success.
+2019-08-12 16:36:19,364 INFO [http-nio-8081-exec-3] o.a.c.c.C.[.[.[/xxl-job-admin] [DirectJDKLog.java : 173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-12 16:36:19,365 INFO [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 524] Initializing Servlet 'dispatcherServlet'
+2019-08-12 16:36:19,376 INFO [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 546] Completed initialization in 11 ms
+2019-08-12 16:54:57,663 INFO [main] c.x.job.admin.XxlJobAdminApplication [StartupInfoLogger.java : 50] Starting XxlJobAdminApplication on chaochao with PID 3952 (E:\IdeaProjects\demo\xxl-job\xxl-job-admin\target\classes started by Hasee in E:\IdeaProjects\demo)
+2019-08-12 16:54:57,668 INFO [main] c.x.job.admin.XxlJobAdminApplication [SpringApplication.java : 650] The following profiles are active: jdbc,mybatis
+2019-08-12 16:54:58,723 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 244] Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-12 16:54:58,725 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 126] Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-12 16:54:58,751 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 182] Finished Spring Data repository scanning in 13ms. Found 0 repository interfaces.
+2019-08-12 16:54:58,998 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 16:54:59,034 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$abc073ee] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 16:54:59,048 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'spring.datasource.druid-com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties' of type [com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 16:54:59,054 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'advisor' of type [org.springframework.aop.support.RegexpMethodPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 16:54:59,335 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 90] Tomcat initialized with port(s): 8081 (http)
+2019-08-12 16:54:59,351 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Initializing ProtocolHandler ["http-nio-8081"]
+2019-08-12 16:54:59,362 INFO [main] o.a.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
+2019-08-12 16:54:59,363 INFO [main] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-12 16:54:59,603 INFO [main] o.a.c.c.C.[.[.[/xxl-job-admin] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
+2019-08-12 16:54:59,604 INFO [main] o.s.web.context.ContextLoader [ServletWebServerApplicationContext.java : 283] Root WebApplicationContext: initialization completed in 1594 ms
+2019-08-12 16:54:59,772 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
+2019-08-12 16:55:01,103 INFO [main] c.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 1003] {dataSource-1} inited
+2019-08-12 16:55:01,345 INFO [main] c.x.r.r.p.XxlRpcProviderFactory [XxlRpcProviderFactory.java : 176] >>>>>>>>>>> xxl-rpc, provider factory add service success. serviceKey = com.xxl.job.core.biz.AdminBiz, serviceBean = class com.xxl.job.admin.service.impl.AdminBizImpl
+2019-08-12 16:55:01,347 INFO [main] c.x.j.a.core.conf.XxlJobScheduler [XxlJobScheduler.java : 57] >>>>>>>>> init xxl-job admin success.
+2019-08-12 16:55:01,609 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-12 16:55:01,730 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java : 58] Adding welcome page template: index
+2019-08-12 16:55:02,220 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Starting ProtocolHandler ["http-nio-8081"]
+2019-08-12 16:55:02,246 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 202] Tomcat started on port(s): 8081 (http) with context path '/xxl-job-admin'
+2019-08-12 16:55:02,249 INFO [main] c.x.job.admin.XxlJobAdminApplication [StartupInfoLogger.java : 59] Started XxlJobAdminApplication in 5.308 seconds (JVM running for 7.32)
+2019-08-12 16:55:06,000 INFO [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 50] >>>>>>>>> init xxl-job admin scheduler success.
+2019-08-12 16:55:15,369 INFO [http-nio-8081-exec-1] o.a.c.c.C.[.[.[/xxl-job-admin] [DirectJDKLog.java : 173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-12 16:55:15,369 INFO [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 524] Initializing Servlet 'dispatcherServlet'
+2019-08-12 16:55:15,379 INFO [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 546] Completed initialization in 10 ms
+2019-08-12 16:59:17,931 INFO [Thread-16] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 208] Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-12 16:59:18,001 INFO [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 199] >>>>>>>>>>> xxl-job, JobScheduleHelper#scheduleThread stop
+2019-08-12 16:59:47,912 INFO [main] c.x.job.admin.XxlJobAdminApplication [StartupInfoLogger.java : 50] Starting XxlJobAdminApplication on chaochao with PID 8900 (E:\IdeaProjects\demo\xxl-job\xxl-job-admin\target\classes started by Hasee in E:\IdeaProjects\demo)
+2019-08-12 16:59:47,916 INFO [main] c.x.job.admin.XxlJobAdminApplication [SpringApplication.java : 650] The following profiles are active: jdbc,mybatis
+2019-08-12 16:59:48,991 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 244] Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-12 16:59:48,992 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 126] Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-12 16:59:49,016 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 182] Finished Spring Data repository scanning in 13ms. Found 0 repository interfaces.
+2019-08-12 16:59:49,274 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 16:59:49,308 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$85fc9ce4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 16:59:49,320 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'spring.datasource.druid-com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties' of type [com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 16:59:49,325 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'advisor' of type [org.springframework.aop.support.RegexpMethodPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 16:59:49,589 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 90] Tomcat initialized with port(s): 8081 (http)
+2019-08-12 16:59:49,603 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Initializing ProtocolHandler ["http-nio-8081"]
+2019-08-12 16:59:49,614 INFO [main] o.a.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
+2019-08-12 16:59:49,615 INFO [main] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-12 16:59:49,869 INFO [main] o.a.c.c.C.[.[.[/xxl-job-admin] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
+2019-08-12 16:59:49,869 INFO [main] o.s.web.context.ContextLoader [ServletWebServerApplicationContext.java : 283] Root WebApplicationContext: initialization completed in 1584 ms
+2019-08-12 16:59:50,048 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
+2019-08-12 16:59:51,512 INFO [main] c.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 1003] {dataSource-1} inited
+2019-08-12 16:59:51,736 INFO [main] c.x.r.r.p.XxlRpcProviderFactory [XxlRpcProviderFactory.java : 176] >>>>>>>>>>> xxl-rpc, provider factory add service success. serviceKey = com.xxl.job.core.biz.AdminBiz, serviceBean = class com.xxl.job.admin.service.impl.AdminBizImpl
+2019-08-12 16:59:51,739 INFO [main] c.x.j.a.core.conf.XxlJobScheduler [XxlJobScheduler.java : 57] >>>>>>>>> init xxl-job admin success.
+2019-08-12 16:59:51,970 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-12 16:59:52,074 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java : 58] Adding welcome page template: index
+2019-08-12 16:59:52,454 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Starting ProtocolHandler ["http-nio-8081"]
+2019-08-12 16:59:52,475 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 202] Tomcat started on port(s): 8081 (http) with context path '/xxl-job-admin'
+2019-08-12 16:59:52,477 INFO [main] c.x.job.admin.XxlJobAdminApplication [StartupInfoLogger.java : 59] Started XxlJobAdminApplication in 5.256 seconds (JVM running for 7.546)
+2019-08-12 16:59:56,000 INFO [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 50] >>>>>>>>> init xxl-job admin scheduler success.
+2019-08-12 17:00:05,936 INFO [http-nio-8081-exec-1] o.a.c.c.C.[.[.[/xxl-job-admin] [DirectJDKLog.java : 173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-12 17:00:05,937 INFO [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 524] Initializing Servlet 'dispatcherServlet'
+2019-08-12 17:00:05,947 INFO [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 546] Completed initialization in 10 ms
+2019-08-12 17:05:02,011 ERROR [nioEventLoopGroup-4-1] c.x.r.r.n.i.n.c.NettyHttpClientHandler [NettyHttpClientHandler.java : 54] >>>>>>>>>>> xxl-rpc netty_http client caught exception
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1125)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:347)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:682)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:617)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:534)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:906)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2019-08-12 17:05:46,522 INFO [main] c.x.job.admin.XxlJobAdminApplication [StartupInfoLogger.java : 50] Starting XxlJobAdminApplication on chaochao with PID 19552 (E:\IdeaProjects\demo\xxl-job\xxl-job-admin\target\classes started by Hasee in E:\IdeaProjects\demo)
+2019-08-12 17:05:46,524 INFO [main] c.x.job.admin.XxlJobAdminApplication [SpringApplication.java : 650] The following profiles are active: jdbc,mybatis
+2019-08-12 17:05:47,592 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 244] Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-12 17:05:47,594 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 126] Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-12 17:05:47,621 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 182] Finished Spring Data repository scanning in 14ms. Found 0 repository interfaces.
+2019-08-12 17:05:47,871 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 17:05:47,903 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$36aa5503] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 17:05:47,917 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'spring.datasource.druid-com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties' of type [com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 17:05:47,922 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'advisor' of type [org.springframework.aop.support.RegexpMethodPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 17:05:48,184 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 90] Tomcat initialized with port(s): 8081 (http)
+2019-08-12 17:05:48,201 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Initializing ProtocolHandler ["http-nio-8081"]
+2019-08-12 17:05:48,213 INFO [main] o.a.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
+2019-08-12 17:05:48,213 INFO [main] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-12 17:05:48,388 INFO [main] o.a.c.c.C.[.[.[/xxl-job-admin] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
+2019-08-12 17:05:48,388 INFO [main] o.s.web.context.ContextLoader [ServletWebServerApplicationContext.java : 283] Root WebApplicationContext: initialization completed in 1465 ms
+2019-08-12 17:05:48,658 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
+2019-08-12 17:05:49,972 INFO [main] c.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 1003] {dataSource-1} inited
+2019-08-12 17:05:50,194 INFO [main] c.x.r.r.p.XxlRpcProviderFactory [XxlRpcProviderFactory.java : 176] >>>>>>>>>>> xxl-rpc, provider factory add service success. serviceKey = com.xxl.job.core.biz.AdminBiz, serviceBean = class com.xxl.job.admin.service.impl.AdminBizImpl
+2019-08-12 17:05:50,196 INFO [main] c.x.j.a.core.conf.XxlJobScheduler [XxlJobScheduler.java : 57] >>>>>>>>> init xxl-job admin success.
+2019-08-12 17:05:50,445 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-12 17:05:50,561 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java : 58] Adding welcome page template: index
+2019-08-12 17:05:50,977 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Starting ProtocolHandler ["http-nio-8081"]
+2019-08-12 17:05:50,998 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 202] Tomcat started on port(s): 8081 (http) with context path '/xxl-job-admin'
+2019-08-12 17:05:51,001 INFO [main] c.x.job.admin.XxlJobAdminApplication [StartupInfoLogger.java : 59] Started XxlJobAdminApplication in 4.986 seconds (JVM running for 6.731)
+2019-08-12 17:05:55,000 INFO [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 50] >>>>>>>>> init xxl-job admin scheduler success.
+2019-08-12 17:05:55,307 INFO [http-nio-8081-exec-1] o.a.c.c.C.[.[.[/xxl-job-admin] [DirectJDKLog.java : 173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-12 17:05:55,307 INFO [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 524] Initializing Servlet 'dispatcherServlet'
+2019-08-12 17:05:55,318 INFO [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java : 546] Completed initialization in 10 ms
+2019-08-12 17:06:11,984 INFO [xxl-job, admin JobTriggerPoolHelper-fastTriggerPool-1184151140] c.x.r.r.i.r.XxlRpcReferenceBean [XxlRpcReferenceBean.java : 225] >>>>>>>>>>> xxl-rpc, invoke error, address:10.0.75.1:9999, XxlRpcRequestXxlRpcRequest{requestId='3a9cf5ea-e29f-4b16-bc52-ed1b1a42b75e', createMillisTime=1565600767671, accessToken='', className='com.xxl.job.core.biz.ExecutorBiz', methodName='run', parameterTypes=[class com.xxl.job.core.biz.model.TriggerParam], parameters=[TriggerParam{jobId=1, executorHandler='demoJobHandler', executorParams='', executorBlockStrategy='SERIAL_EXECUTION', executorTimeout=0, logId=2, logDateTim=1565600767629, glueType='BEAN', glueSource='', glueUpdatetime=1541283691000, broadcastIndex=0, broadcastTotal=1}], version='null'}
+2019-08-12 17:06:11,992 ERROR [xxl-job, admin JobTriggerPoolHelper-fastTriggerPool-1184151140] c.x.j.a.core.trigger.XxlJobTrigger [XxlJobTrigger.java : 198] >>>>>>>>>>> xxl-job trigger error, please check if the executor[10.0.75.1:9999] is running.
+com.xxl.rpc.util.XxlRpcException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /10.0.75.1:9999
+	at com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean$1.invoke(XxlRpcReferenceBean.java:227)
+	at com.sun.proxy.$Proxy86.run(Unknown Source)
+	at com.xxl.job.admin.core.trigger.XxlJobTrigger.runExecutor(XxlJobTrigger.java:196)
+	at com.xxl.job.admin.core.trigger.XxlJobTrigger.processTrigger(XxlJobTrigger.java:149)
+	at com.xxl.job.admin.core.trigger.XxlJobTrigger.trigger(XxlJobTrigger.java:74)
+	at com.xxl.job.admin.core.thread.JobTriggerPoolHelper$3.run(JobTriggerPoolHelper.java:76)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /10.0.75.1:9999
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:670)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:617)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:534)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:906)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 12 common frames omitted
+2019-08-12 17:07:05,590 INFO [main] c.x.j.e.XxlJobExecutorApplication [StartupInfoLogger.java : 50] Starting XxlJobExecutorApplication on chaochao with PID 8852 (E:\IdeaProjects\demo\xxl-job\xxl-job-executor\target\classes started by Hasee in E:\IdeaProjects\demo)
+2019-08-12 17:07:05,596 INFO [main] c.x.j.e.XxlJobExecutorApplication [SpringApplication.java : 650] The following profiles are active: jdbc,mybatis
+2019-08-12 17:07:06,492 WARN [main] o.m.s.mapper.ClassPathMapperScanner [Logger.java : 44] No MyBatis mapper was found in '[com.xxl.job.executor]' package. Please check your configuration.
+2019-08-12 17:07:06,537 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 244] Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-12 17:07:06,540 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 126] Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-12 17:07:06,567 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 182] Finished Spring Data repository scanning in 12ms. Found 0 repository interfaces.
+2019-08-12 17:07:06,799 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 17:07:06,871 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d6b68b6f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 17:07:06,894 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'spring.datasource.druid-com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties' of type [com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 17:07:06,901 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'advisor' of type [org.springframework.aop.support.RegexpMethodPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 17:07:07,253 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 90] Tomcat initialized with port(s): 8082 (http)
+2019-08-12 17:07:07,270 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Initializing ProtocolHandler ["http-nio-8082"]
+2019-08-12 17:07:07,286 INFO [main] o.a.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
+2019-08-12 17:07:07,287 INFO [main] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-12 17:07:07,479 INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
+2019-08-12 17:07:07,480 INFO [main] o.s.web.context.ContextLoader [ServletWebServerApplicationContext.java : 283] Root WebApplicationContext: initialization completed in 1564 ms
+2019-08-12 17:07:07,556 INFO [main] c.x.j.e.core.config.XxlJobConfig [XxlJobConfig.java : 43] >>>>>>>>>>> xxl-job config init.
+2019-08-12 17:07:07,571 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 229] >>>>>>>>>>> xxl-job register jobhandler success, name:commandJobHandler, jobHandler:com.xxl.job.executor.service.jobhandler.CommandJobHandler@1f51431
+2019-08-12 17:07:07,572 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 229] >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler, jobHandler:com.xxl.job.executor.service.jobhandler.DemoJobHandler@26a2f7f9
+2019-08-12 17:07:07,572 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 229] >>>>>>>>>>> xxl-job register jobhandler success, name:httpJobHandler, jobHandler:com.xxl.job.executor.service.jobhandler.HttpJobHandler@38eb2c50
+2019-08-12 17:07:07,572 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 229] >>>>>>>>>>> xxl-job register jobhandler success, name:shardingJobHandler, jobHandler:com.xxl.job.executor.service.jobhandler.ShardingJobHandler@8bffb8b
+2019-08-12 17:07:07,602 INFO [main] c.x.r.r.p.XxlRpcProviderFactory [XxlRpcProviderFactory.java : 176] >>>>>>>>>>> xxl-rpc, provider factory add service success. serviceKey = com.xxl.job.core.biz.ExecutorBiz, serviceBean = class com.xxl.job.core.biz.impl.ExecutorBizImpl
+2019-08-12 17:07:07,963 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-12 17:07:08,103 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
+2019-08-12 17:07:09,432 INFO [main] c.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 1003] {dataSource-1} inited
+2019-08-12 17:07:09,638 INFO [Thread-8] com.xxl.rpc.remoting.net.Server [NettyHttpServer.java : 62] >>>>>>>>>>> xxl-rpc remoting server start success, nettype = com.xxl.rpc.remoting.net.impl.netty_http.server.NettyHttpServer, port = 9999
+2019-08-12 17:07:09,861 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Starting ProtocolHandler ["http-nio-8082"]
+2019-08-12 17:07:09,878 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 202] Tomcat started on port(s): 8082 (http) with context path ''
+2019-08-12 17:07:09,880 INFO [main] c.x.j.e.XxlJobExecutorApplication [StartupInfoLogger.java : 59] Started XxlJobExecutorApplication in 4.851 seconds (JVM running for 6.792)
+2019-08-12 17:16:29,635 ERROR [nioEventLoopGroup-5-1] c.x.r.r.n.i.n.c.NettyHttpClientHandler [NettyHttpClientHandler.java : 54] >>>>>>>>>>> xxl-rpc netty_http client caught exception
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1125)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:347)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:682)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:617)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:534)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:906)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2019-08-12 17:16:36,062 INFO [main] c.x.j.e.XxlJobExecutorApplication [StartupInfoLogger.java : 50] Starting XxlJobExecutorApplication on chaochao with PID 19356 (E:\IdeaProjects\demo\xxl-job\xxl-job-executor\target\classes started by Hasee in E:\IdeaProjects\demo)
+2019-08-12 17:16:36,067 INFO [main] c.x.j.e.XxlJobExecutorApplication [SpringApplication.java : 650] The following profiles are active: jdbc,mybatis
+2019-08-12 17:16:36,903 WARN [main] o.m.s.mapper.ClassPathMapperScanner [Logger.java : 44] No MyBatis mapper was found in '[com.xxl.job.executor]' package. Please check your configuration.
+2019-08-12 17:16:36,939 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 244] Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-12 17:16:36,941 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 126] Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-12 17:16:36,959 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 182] Finished Spring Data repository scanning in 6ms. Found 0 repository interfaces.
+2019-08-12 17:16:37,194 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 17:16:37,236 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$61bd410a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 17:16:37,252 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'spring.datasource.druid-com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties' of type [com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 17:16:37,257 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'advisor' of type [org.springframework.aop.support.RegexpMethodPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 17:16:37,516 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 90] Tomcat initialized with port(s): 8082 (http)
+2019-08-12 17:16:37,530 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Initializing ProtocolHandler ["http-nio-8082"]
+2019-08-12 17:16:37,541 INFO [main] o.a.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
+2019-08-12 17:16:37,541 INFO [main] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-12 17:16:37,714 INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
+2019-08-12 17:16:37,715 INFO [main] o.s.web.context.ContextLoader [ServletWebServerApplicationContext.java : 283] Root WebApplicationContext: initialization completed in 1311 ms
+2019-08-12 17:16:37,779 INFO [main] c.x.j.e.core.config.XxlJobConfig [XxlJobConfig.java : 43] >>>>>>>>>>> xxl-job config init.
+2019-08-12 17:16:37,851 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 229] >>>>>>>>>>> xxl-job register jobhandler success, name:commandJobHandler, jobHandler:com.xxl.job.executor.service.jobhandler.CommandJobHandler@56d93692
+2019-08-12 17:16:37,852 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 229] >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler, jobHandler:com.xxl.job.executor.service.jobhandler.DemoJobHandler@1686f0b4
+2019-08-12 17:16:37,852 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 229] >>>>>>>>>>> xxl-job register jobhandler success, name:httpJobHandler, jobHandler:com.xxl.job.executor.service.jobhandler.HttpJobHandler@76c548f
+2019-08-12 17:16:37,852 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 229] >>>>>>>>>>> xxl-job register jobhandler success, name:sayHelloJob, jobHandler:com.xxl.job.executor.service.jobhandler.SayHelloWordHandler@3900fa71
+2019-08-12 17:16:37,852 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 229] >>>>>>>>>>> xxl-job register jobhandler success, name:shardingJobHandler, jobHandler:com.xxl.job.executor.service.jobhandler.ShardingJobHandler@26722665
+2019-08-12 17:16:37,880 INFO [main] c.x.r.r.p.XxlRpcProviderFactory [XxlRpcProviderFactory.java : 176] >>>>>>>>>>> xxl-rpc, provider factory add service success. serviceKey = com.xxl.job.core.biz.ExecutorBiz, serviceBean = class com.xxl.job.core.biz.impl.ExecutorBizImpl
+2019-08-12 17:16:38,133 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-12 17:16:38,272 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
+2019-08-12 17:16:39,576 INFO [main] c.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 1003] {dataSource-1} inited
+2019-08-12 17:16:39,832 INFO [Thread-8] com.xxl.rpc.remoting.net.Server [NettyHttpServer.java : 62] >>>>>>>>>>> xxl-rpc remoting server start success, nettype = com.xxl.rpc.remoting.net.impl.netty_http.server.NettyHttpServer, port = 9999
+2019-08-12 17:16:40,018 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Starting ProtocolHandler ["http-nio-8082"]
+2019-08-12 17:16:40,033 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 202] Tomcat started on port(s): 8082 (http) with context path ''
+2019-08-12 17:16:40,035 INFO [main] c.x.j.e.XxlJobExecutorApplication [StartupInfoLogger.java : 59] Started XxlJobExecutorApplication in 4.652 seconds (JVM running for 6.705)
+2019-08-12 17:18:40,115 INFO [xxl-rpc, NettyHttpServer-serverHandlerPool-1860322255] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 242] >>>>>>>>>>> xxl-job regist JobThread success, jobId:2, handler:com.xxl.job.executor.service.jobhandler.SayHelloWordHandler@3900fa71
+2019-08-12 17:20:33,094 INFO [Thread-20] com.xxl.job.core.thread.JobThread [JobThread.java : 214] >>>>>>>>>>> xxl-job JobThread stoped, hashCode:Thread[Thread-20,10,main]
+2019-08-12 17:20:39,293 ERROR [nioEventLoopGroup-6-1] c.x.r.r.n.i.n.c.NettyHttpClientHandler [NettyHttpClientHandler.java : 54] >>>>>>>>>>> xxl-rpc netty_http client caught exception
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1125)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:347)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:682)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:617)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:534)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:906)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2019-08-12 17:20:45,459 INFO [main] c.x.j.e.XxlJobExecutorApplication [StartupInfoLogger.java : 50] Starting XxlJobExecutorApplication on chaochao with PID 8316 (E:\IdeaProjects\demo\xxl-job\xxl-job-executor\target\classes started by Hasee in E:\IdeaProjects\demo)
+2019-08-12 17:20:45,464 INFO [main] c.x.j.e.XxlJobExecutorApplication [SpringApplication.java : 650] The following profiles are active: jdbc,mybatis
+2019-08-12 17:20:46,307 WARN [main] o.m.s.mapper.ClassPathMapperScanner [Logger.java : 44] No MyBatis mapper was found in '[com.xxl.job.executor]' package. Please check your configuration.
+2019-08-12 17:20:46,346 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 244] Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-12 17:20:46,348 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 126] Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-12 17:20:46,364 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 182] Finished Spring Data repository scanning in 6ms. Found 0 repository interfaces.
+2019-08-12 17:20:46,587 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 17:20:46,629 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$dc898557] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 17:20:46,646 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'spring.datasource.druid-com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties' of type [com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 17:20:46,650 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'advisor' of type [org.springframework.aop.support.RegexpMethodPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 17:20:46,894 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 90] Tomcat initialized with port(s): 8082 (http)
+2019-08-12 17:20:46,909 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Initializing ProtocolHandler ["http-nio-8082"]
+2019-08-12 17:20:46,920 INFO [main] o.a.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
+2019-08-12 17:20:46,921 INFO [main] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-12 17:20:47,100 INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
+2019-08-12 17:20:47,100 INFO [main] o.s.web.context.ContextLoader [ServletWebServerApplicationContext.java : 283] Root WebApplicationContext: initialization completed in 1319 ms
+2019-08-12 17:20:47,219 INFO [main] c.x.j.e.core.config.XxlJobConfig [XxlJobConfig.java : 43] >>>>>>>>>>> xxl-job config init.
+2019-08-12 17:20:47,232 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 229] >>>>>>>>>>> xxl-job register jobhandler success, name:commandJobHandler, jobHandler:com.xxl.job.executor.service.jobhandler.CommandJobHandler@6eb82908
+2019-08-12 17:20:47,233 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 229] >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler, jobHandler:com.xxl.job.executor.service.jobhandler.DemoJobHandler@4a8df3e2
+2019-08-12 17:20:47,233 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 229] >>>>>>>>>>> xxl-job register jobhandler success, name:httpJobHandler, jobHandler:com.xxl.job.executor.service.jobhandler.HttpJobHandler@3d98d138
+2019-08-12 17:20:47,233 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 229] >>>>>>>>>>> xxl-job register jobhandler success, name:sayHelloJob, jobHandler:com.xxl.job.executor.service.jobhandler.SayHelloWordHandler@2f2d52ef
+2019-08-12 17:20:47,233 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 229] >>>>>>>>>>> xxl-job register jobhandler success, name:shardingJobHandler, jobHandler:com.xxl.job.executor.service.jobhandler.ShardingJobHandler@f2ce6b
+2019-08-12 17:20:47,260 INFO [main] c.x.r.r.p.XxlRpcProviderFactory [XxlRpcProviderFactory.java : 176] >>>>>>>>>>> xxl-rpc, provider factory add service success. serviceKey = com.xxl.job.core.biz.ExecutorBiz, serviceBean = class com.xxl.job.core.biz.impl.ExecutorBizImpl
+2019-08-12 17:20:47,489 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-12 17:20:47,616 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
+2019-08-12 17:20:48,927 INFO [main] c.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 1003] {dataSource-1} inited
+2019-08-12 17:20:49,116 INFO [Thread-7] com.xxl.rpc.remoting.net.Server [NettyHttpServer.java : 62] >>>>>>>>>>> xxl-rpc remoting server start success, nettype = com.xxl.rpc.remoting.net.impl.netty_http.server.NettyHttpServer, port = 9999
+2019-08-12 17:20:49,374 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Starting ProtocolHandler ["http-nio-8082"]
+2019-08-12 17:20:49,392 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 202] Tomcat started on port(s): 8082 (http) with context path ''
+2019-08-12 17:20:49,394 INFO [main] c.x.j.e.XxlJobExecutorApplication [StartupInfoLogger.java : 59] Started XxlJobExecutorApplication in 4.531 seconds (JVM running for 6.481)
+2019-08-12 17:21:46,951 INFO [main] c.x.j.e.XxlJobExecutorApplication [StartupInfoLogger.java : 50] Starting XxlJobExecutorApplication on chaochao with PID 20344 (E:\IdeaProjects\demo\xxl-job\xxl-job-executor\target\classes started by Hasee in E:\IdeaProjects\demo)
+2019-08-12 17:21:46,959 INFO [main] c.x.j.e.XxlJobExecutorApplication [SpringApplication.java : 650] The following profiles are active: jdbc,mybatis
+2019-08-12 17:21:47,840 WARN [main] o.m.s.mapper.ClassPathMapperScanner [Logger.java : 44] No MyBatis mapper was found in '[com.xxl.job.executor]' package. Please check your configuration.
+2019-08-12 17:21:47,888 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 244] Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-12 17:21:47,890 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 126] Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-12 17:21:47,908 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 182] Finished Spring Data repository scanning in 6ms. Found 0 repository interfaces.
+2019-08-12 17:21:48,167 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 17:21:48,207 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d6b68b6f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 17:21:48,225 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'spring.datasource.druid-com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties' of type [com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 17:21:48,229 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'advisor' of type [org.springframework.aop.support.RegexpMethodPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 17:21:48,483 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 90] Tomcat initialized with port(s): 8082 (http)
+2019-08-12 17:21:48,499 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Initializing ProtocolHandler ["http-nio-8082"]
+2019-08-12 17:21:48,510 INFO [main] o.a.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
+2019-08-12 17:21:48,511 INFO [main] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-12 17:21:48,686 INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
+2019-08-12 17:21:48,687 INFO [main] o.s.web.context.ContextLoader [ServletWebServerApplicationContext.java : 283] Root WebApplicationContext: initialization completed in 1359 ms
+2019-08-12 17:21:48,752 INFO [main] c.x.j.e.core.config.XxlJobConfig [XxlJobConfig.java : 43] >>>>>>>>>>> xxl-job config init.
+2019-08-12 17:21:48,818 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 229] >>>>>>>>>>> xxl-job register jobhandler success, name:commandJobHandler, jobHandler:com.xxl.job.executor.service.jobhandler.CommandJobHandler@1f51431
+2019-08-12 17:21:48,818 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 229] >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler, jobHandler:com.xxl.job.executor.service.jobhandler.DemoJobHandler@26a2f7f9
+2019-08-12 17:21:48,819 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 229] >>>>>>>>>>> xxl-job register jobhandler success, name:httpJobHandler, jobHandler:com.xxl.job.executor.service.jobhandler.HttpJobHandler@38eb2c50
+2019-08-12 17:21:48,819 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 229] >>>>>>>>>>> xxl-job register jobhandler success, name:sayHelloJob, jobHandler:com.xxl.job.executor.service.jobhandler.SayHelloWordHandler@8bffb8b
+2019-08-12 17:21:48,819 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 229] >>>>>>>>>>> xxl-job register jobhandler success, name:shardingJobHandler, jobHandler:com.xxl.job.executor.service.jobhandler.ShardingJobHandler@21422231
+2019-08-12 17:21:48,848 INFO [main] c.x.r.r.p.XxlRpcProviderFactory [XxlRpcProviderFactory.java : 176] >>>>>>>>>>> xxl-rpc, provider factory add service success. serviceKey = com.xxl.job.core.biz.ExecutorBiz, serviceBean = class com.xxl.job.core.biz.impl.ExecutorBizImpl
+2019-08-12 17:21:49,079 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-12 17:21:49,214 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
+2019-08-12 17:21:50,508 INFO [main] c.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 1003] {dataSource-1} inited
+2019-08-12 17:21:50,721 INFO [Thread-7] com.xxl.rpc.remoting.net.Server [NettyHttpServer.java : 62] >>>>>>>>>>> xxl-rpc remoting server start success, nettype = com.xxl.rpc.remoting.net.impl.netty_http.server.NettyHttpServer, port = 9999
+2019-08-12 17:21:50,918 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Starting ProtocolHandler ["http-nio-8082"]
+2019-08-12 17:21:50,933 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 202] Tomcat started on port(s): 8082 (http) with context path ''
+2019-08-12 17:21:50,936 INFO [main] c.x.j.e.XxlJobExecutorApplication [StartupInfoLogger.java : 59] Started XxlJobExecutorApplication in 4.74 seconds (JVM running for 6.657)
+2019-08-12 17:25:46,025 INFO [main] c.x.j.e.XxlJobExecutorApplication [StartupInfoLogger.java : 50] Starting XxlJobExecutorApplication on chaochao with PID 13220 (E:\IdeaProjects\demo\xxl-job\xxl-job-executor\target\classes started by Hasee in E:\IdeaProjects\demo)
+2019-08-12 17:25:46,030 INFO [main] c.x.j.e.XxlJobExecutorApplication [SpringApplication.java : 650] The following profiles are active: jdbc,mybatis
+2019-08-12 17:25:46,943 WARN [main] o.m.s.mapper.ClassPathMapperScanner [Logger.java : 44] No MyBatis mapper was found in '[com.xxl.job.executor]' package. Please check your configuration.
+2019-08-12 17:25:46,980 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 244] Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-12 17:25:46,982 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 126] Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-12 17:25:47,001 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 182] Finished Spring Data repository scanning in 8ms. Found 0 repository interfaces.
+2019-08-12 17:25:47,274 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 17:25:47,311 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4f4e7b74] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 17:25:47,337 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'spring.datasource.druid-com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties' of type [com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 17:25:47,342 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java : 330] Bean 'advisor' of type [org.springframework.aop.support.RegexpMethodPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 17:25:47,628 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 90] Tomcat initialized with port(s): 8082 (http)
+2019-08-12 17:25:47,645 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Initializing ProtocolHandler ["http-nio-8082"]
+2019-08-12 17:25:47,657 INFO [main] o.a.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
+2019-08-12 17:25:47,657 INFO [main] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-12 17:25:47,841 INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
+2019-08-12 17:25:47,842 INFO [main] o.s.web.context.ContextLoader [ServletWebServerApplicationContext.java : 283] Root WebApplicationContext: initialization completed in 1442 ms
+2019-08-12 17:25:47,911 INFO [main] c.x.j.e.core.config.XxlJobConfig [XxlJobConfig.java : 43] >>>>>>>>>>> xxl-job config init.
+2019-08-12 17:25:47,981 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 229] >>>>>>>>>>> xxl-job register jobhandler success, name:commandJobHandler, jobHandler:com.xxl.job.executor.service.jobhandler.CommandJobHandler@5c10285a
+2019-08-12 17:25:47,981 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 229] >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler, jobHandler:com.xxl.job.executor.service.jobhandler.DemoJobHandler@6b667cb3
+2019-08-12 17:25:47,981 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 229] >>>>>>>>>>> xxl-job register jobhandler success, name:httpJobHandler, jobHandler:com.xxl.job.executor.service.jobhandler.HttpJobHandler@6f38a289
+2019-08-12 17:25:47,981 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 229] >>>>>>>>>>> xxl-job register jobhandler success, name:sayHelloJob, jobHandler:com.xxl.job.executor.service.jobhandler.SayHelloWordHandler@61e3cf4d
+2019-08-12 17:25:47,981 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 229] >>>>>>>>>>> xxl-job register jobhandler success, name:shardingJobHandler, jobHandler:com.xxl.job.executor.service.jobhandler.ShardingJobHandler@3cec79d3
+2019-08-12 17:25:48,012 INFO [main] c.x.r.r.p.XxlRpcProviderFactory [XxlRpcProviderFactory.java : 176] >>>>>>>>>>> xxl-rpc, provider factory add service success. serviceKey = com.xxl.job.core.biz.ExecutorBiz, serviceBean = class com.xxl.job.core.biz.impl.ExecutorBizImpl
+2019-08-12 17:25:48,253 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 171] Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-12 17:25:48,431 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
+2019-08-12 17:25:49,831 INFO [main] c.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 1003] {dataSource-1} inited
+2019-08-12 17:25:49,970 INFO [Thread-8] com.xxl.rpc.remoting.net.Server [NettyHttpServer.java : 62] >>>>>>>>>>> xxl-rpc remoting server start success, nettype = com.xxl.rpc.remoting.net.impl.netty_http.server.NettyHttpServer, port = 9999
+2019-08-12 17:25:50,254 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Starting ProtocolHandler ["http-nio-8082"]
+2019-08-12 17:25:50,269 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 202] Tomcat started on port(s): 8082 (http) with context path ''
+2019-08-12 17:25:50,272 INFO [main] c.x.j.e.XxlJobExecutorApplication [StartupInfoLogger.java : 59] Started XxlJobExecutorApplication in 4.903 seconds (JVM running for 6.912)
