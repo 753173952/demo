@@ -21,6 +21,11 @@
             <version>0.0.1-SNAPSHOT</version>
             <optional>true</optional>
         </dependency>
+        <!-- web-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
         <!-- jwt授权 -->
         <dependency>
             <groupId>com.auth0</groupId>
