@@ -20,6 +20,12 @@
             <groupId>com.example</groupId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+        <!-- 依赖core模块-->
+        <dependency>
+            <artifactId>core</artifactId>
+            <groupId>com.example</groupId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
         <!-- XxlJob-->
         <dependency>
             <groupId>com.xuxueli</groupId>

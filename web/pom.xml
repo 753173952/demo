@@ -14,12 +14,13 @@
     <version>0.0.1-SNAPSHOT</version>
 
     <dependencies>
+        <!-- 依赖core模块 -->
         <dependency>
             <artifactId>core</artifactId>
             <groupId>com.example</groupId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-        <!-- jwt授权-->
+        <!-- jwt授权 -->
         <dependency>
             <groupId>com.auth0</groupId>
             <artifactId>java-jwt</artifactId>
@@ -37,6 +38,7 @@
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.1.2</version>
         </dependency>
+        <!-- 热部署-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
