@@ -1,0 +1,13 @@
+#调度中心数据库连接配置使用配置文件中的配置
+server:
+  port: 8081 #项目启动端口
+  tomcat:
+    uri-encoding: utf-8
+#报警邮箱配置
+spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    profiles:
+      include: jdbc,redis,xxljob
+

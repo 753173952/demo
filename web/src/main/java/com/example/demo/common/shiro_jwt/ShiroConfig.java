@@ -50,10 +50,13 @@ public class ShiroConfig {
         //自定义Url规则 shiro根据顺序从上到下去匹配 匹配了就不再继续验证
         Map<String, String> filterRuleMap = new LinkedHashMap<>();
         //登录注册路径放行
-        filterRuleMap.put("/user/login", "anon");
-        filterRuleMap.put("/user/register", "anon");
+        // filterRuleMap.put("/user/login", "anon");
+        // filterRuleMap.put("/user/register", "anon");
         //所有的请求通过我们自定义的JWTFilter
-        filterRuleMap.put("/**", "jwtFilter");
+        // filterRuleMap.put("/**", "jwtFilter");
+
+        // 暂时先放行所有
+        filterRuleMap.put("/**", "anon");
 
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterRuleMap);
 
