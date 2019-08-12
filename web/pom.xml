@@ -40,7 +40,6 @@
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.1.2</version>
-            <optional>true</optional>
         </dependency>
         <!-- 热部署-->
         <dependency>

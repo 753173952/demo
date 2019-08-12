@@ -17,7 +17,7 @@ spring:
     settings:
       number_format: 0.##########
   profiles: ### xxl-job, datasource
-    include: jdbc
+    include: jdbc,mybatis
   mail: ### xxl-job email
     host: smtp.qq.com
     port: 25
@@ -32,8 +32,6 @@ spring:
             required: true
           socketFactory:
             class: javax.net.ssl.SSLSocketFactory
-mybatis: ### mybatis
-  mapper-locations: classpath:/mybatis-mapper/*Mapper.xml
 xxl:
   job:
     accessToken: ### xxl-job, access token
