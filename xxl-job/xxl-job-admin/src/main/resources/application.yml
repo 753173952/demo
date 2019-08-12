@@ -1,0 +1,40 @@
+### web
+server:
+  port: 8080
+  servlet:
+    context-path: /xxl-job-admin
+### resources
+spring:
+  mvc:
+    static-path-pattern: /static/**
+  resources:
+    static-locations: classpath:/static/
+  freemarker: ### freemarker
+    template-loader-path: classpath:/templates/
+    suffix: .ftl
+    charset: UTF-8
+    request-context-attribute: request
+    settings:
+      number_format: 0.##########
+  profiles: ### xxl-job, datasource
+    include: jdbc
+  mail: ### xxl-job email
+    host: smtp.qq.com
+    port: 25
+    username: 753173952@qq.com
+    password: a770115988
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory
+mybatis: ### mybatis
+  mapper-locations: classpath:/mybatis-mapper/*Mapper.xml
+xxl:
+  job:
+    accessToken: ### xxl-job, access token
+    i18n: #### xxl-job, i18n (default empty as chinese, "en" as english)

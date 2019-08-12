@@ -6,6 +6,7 @@
     <modules>
         <module>web</module>
         <module>core</module>
+        <module>xxl-job</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
