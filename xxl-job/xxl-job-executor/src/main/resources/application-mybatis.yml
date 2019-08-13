@@ -7,6 +7,7 @@ mybatis-plus:
     cache-enabled: false #关闭二级缓存
     map-underscore-to-camel-case: true #驼峰映射配置
     log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl #sql日志打印
+    call-setters-on-nulls: true #不加这个查询数据为空时，字段将被隐藏
   global-config:
     db-config:
       id-type: auto #主键生成策略配置 数据库自增
