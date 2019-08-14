@@ -1,6 +1,10 @@
 ### web
 server:
   port: 8081
+  tomcat:
+    uri-encoding: UTF-8
+    max-threads: 200
+    min-spare-threads: 10
   servlet:
     context-path: /xxl-job-admin
 ### resources
@@ -36,3 +40,5 @@ xxl:
   job:
     accessToken: ### xxl-job, access token
     i18n: #### xxl-job, i18n (default empty as chinese, "en" as english)
+logging:
+  config: classpath:logback.xml
