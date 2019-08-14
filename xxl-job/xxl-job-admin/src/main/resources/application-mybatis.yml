@@ -6,7 +6,7 @@ mybatis-plus:
     local-cache-scope: statement #关闭一级缓存
     cache-enabled: false #关闭二级缓存
     map-underscore-to-camel-case: true #驼峰映射配置
-    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl #sql日志打印
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #sql日志打印
     call-setters-on-nulls: true #不加这个查询数据为空时，字段将被隐藏
   global-config:
     db-config:
