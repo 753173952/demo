@@ -9,8 +9,5 @@ spring:
   profiles:
     include: jdbc,mybatis,quartz,redis #引入数据库相关配置
 
-
-
-
-
-
+logging:
+  path: log
