@@ -1,3 +1,2 @@
-算你厉害(master) 算你厉害(develop)
-算你厉害2(master)
-算你厉害3(master)
+厉害1(master)
+厉害2(master)
